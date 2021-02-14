@@ -1,0 +1,91 @@
+.container {
+  max-width: 1440px;
+  margin: 0 auto;
+
+  overflow: hidden;
+
+  padding: 36px 16px;
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
+  .container-item-1 {
+    max-width: 576px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .container-item-2 {
+    img{
+      max-height: 700px;
+      width: auto;
+    }
+  }
+}
+
+.the-knight {
+  width: 140%;
+  transform: translate3d(-30px, 0, 0);
+  transform: rotate(5deg);
+}
+
+.btn {
+  display: inline-block;
+  padding: 12px 32px;
+  margin-right: 4px;
+  border-radius: 4px;
+
+  background: linear-gradient(180deg, #6771bf 0%, #272a31 100%);
+
+  text-transform: uppercase;
+  font-weight: 700;
+
+  transition: 0.6s ease;
+
+  &:hover {
+    transform: scale(1.02);
+  }
+}
+
+.btn-secondary {
+  display: inline-block;
+  padding: 10px 32px;
+  border-radius: 4px;
+
+  position: relative;
+
+  border: 2px solid $hollow;
+  background: transparent;
+
+  text-transform: uppercase;
+  font-weight: 700;
+
+  transition: 0.6s ease;
+
+  &::after{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 0%;
+    height: 100%;
+    background: linear-gradient(180deg, #6771bf 0%, #272a31 100%);
+
+    transition: .6s ease;
+    z-index: -1;
+  }
+  &:hover {
+    
+    padding: 12px 36px;
+
+    &::after{
+      border: none;
+      border-radius: 4px;
+      width: 100%;
+    } 
+    transform: scale(1.02);
+  }
+}
