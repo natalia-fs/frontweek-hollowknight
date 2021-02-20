@@ -3,12 +3,19 @@
   margin: 0 auto;
 
   overflow: hidden;
+  height: 85vh;
 
   padding: 36px 16px;
 
   display: flex;
   flex-direction: row;
   align-items: center;
+
+  @include responsive(){
+    flex-direction: column;
+    overflow: none;
+    height: auto;
+  }
 
   .container-item-1 {
     max-width: 576px;
@@ -17,6 +24,17 @@
     flex-direction: column;
     align-items: flex-start;
   }
+  .flex{
+    display: flex;
+  }
+
+  .w-auto{
+    width: auto;
+  }
+  .align-items-center{
+    align-items: center;
+  }
+  
   .container-item-2 {
     img{
       max-height: 700px;
@@ -29,6 +47,11 @@
   width: 140%;
   transform: translate3d(-30px, 0, 0);
   transform: rotate(5deg);
+
+  @include responsive(){
+    width: 100%;
+    transform: translate3d(0,0,0);
+  }
 }
 
 .btn {
@@ -81,8 +104,8 @@
     
     padding: 12px 36px;
 
+    border: none;
     &::after{
-      border: none;
       border-radius: 4px;
       width: 100%;
     } 

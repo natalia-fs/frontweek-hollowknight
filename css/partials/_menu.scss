@@ -16,14 +16,18 @@ header {
   display: flex;
   justify-content: start;
   align-items: center;
+
 }
 
 .nav-list{
   list-style: none;
   display: flex;
-
+  
   li {
     margin-left: 24px;
+  }
+  @include responsive(){
+    display: none;
   }
 }
 
@@ -70,10 +74,28 @@ header {
   }
 }
 
+.bx{
+  width: 48px;
+  height: 48px;
+  background-color: $white;
+  border-radius: 8px;
+
+  display: none;
+
+  @include responsive(){
+    display: block;
+  }
+}
+
 .nav-social{
   display: flex;
   justify-content: center;
   align-items: center;
+
+  @include responsive(){
+    display: none;
+    height: auto;
+  }
 
   svg{
     margin-left: 16px;
