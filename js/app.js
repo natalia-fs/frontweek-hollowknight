@@ -42,4 +42,8 @@ document.addEventListener('DOMContentLoaded', () => {
     {y: 0, opacity: 1, ease: Bounce.ease}, '-=1.3'
   )
 
+
+  particlesJS.load('particles-js', 'particles.json', function() {
+    console.log('callback - particles.js config loaded');
+  });
 })
