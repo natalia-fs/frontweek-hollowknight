@@ -20,6 +20,7 @@ Projeto feito inspirado nas aulas da Frontweek, do Násser Yousef Ali.
 ## Preview
 
 <div align="center" >
-  <a href="frontweek-hollowknight.netlify.app">Acesse aqui</a>
   <img src="img/preview.png"/>
 </div>
+
+### Acesse [aqui](https://frontweek-hollowknight.netlify.app/)
