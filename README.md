@@ -18,6 +18,8 @@ Projeto feito inspirado nas aulas da Frontweek, do Násser Yousef Ali.
 - [Particles.js](https://github.com/VincentGarreau/particles.js/)
 
 ## Preview
+
 <div align="center" >
+  <a href="frontweek-hollowknight.netlify.app">Acesse aqui</a>
   <img src="img/preview.png"/>
 </div>
