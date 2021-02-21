@@ -2,7 +2,7 @@
   max-width: 1440px;
   margin: 0 auto;
 
-  overflow: hidden;
+  overflow: none;
   height: 85vh;
 
   padding: 36px 16px;
@@ -13,7 +13,7 @@
 
   @include responsive(){
     flex-direction: column;
-    overflow: none;
+    overflow: hidden;
     height: auto;
   }
 
@@ -39,6 +39,7 @@
     img{
       max-height: 700px;
       width: auto;
+      max-width: 100vw;
     }
   }
 }
@@ -49,11 +50,15 @@
   transform: rotate(5deg);
 
   @include responsive(){
-    width: 100%;
+    // width: 100%;
     transform: translate3d(0,0,0);
   }
 }
-
+.buttons{
+  @include responsive(){
+    display: flex;
+  }
+}
 .btn {
   display: inline-block;
   padding: 12px 32px;
@@ -111,4 +116,64 @@
     } 
     transform: scale(1.02);
   }
+}
+
+.item-3{
+  svg{
+    cursor: pointer;
+    path {
+      transition: .6s ease;
+    }
+
+    &:hover{
+      path, circle {
+        fill: $hollow-light;
+      }
+    }
+  }
+}
+
+.bg-video{
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 100%;
+
+  z-index: -2;
+  overflow: hidden;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &::after{
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    background: linear-gradient(252.87deg, #0A0C10 33.58%, rgba(10, 12, 16, 0.55) 53.46%, #090A17 74.5%);
+    transform: matrix(-1, 0, 0, 1, 0, 0);
+  }
+}
+
+.bg-loader{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 99;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background: linear-gradient(225deg, $hollow 0%, $hollow-dark 100%);
+
+  overflow: hidden;
 }

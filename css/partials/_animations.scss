@@ -1,0 +1,34 @@
+.logo-hk{
+    fill: transparent;
+
+    animation: logo-hk 12s ease infinite alternate;
+}
+
+@keyframes logo-hk{
+    0%{
+        stroke-width: 0;
+        fill: transparent;
+    }
+    30%{
+        stroke-width: 1;
+    }
+    60%, 100%{
+        stroke-width: 0.3;
+        fill: $white-dark;
+    }
+}
+// @keyframes logo-hk{
+//     0%{
+//         stroke-width: 0;
+//         stroke-dasharray: 1 100;
+//         fill: transparent;
+//     }
+//     30%{
+//         stroke-width: 1;
+//         stroke-dasharray: 100 0;
+//     }
+//     60%, 100%{
+//         stroke-width: 0.3;
+//         fill: $white-dark;
+//     }
+// }

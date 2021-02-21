@@ -38,7 +38,7 @@ p {
 .container {
   max-width: 1440px;
   margin: 0 auto;
-  overflow: hidden;
+  overflow: none;
   height: 85vh;
   padding: 36px 16px;
   display: -webkit-box;
@@ -59,7 +59,7 @@ p {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    overflow: none;
+    overflow: hidden;
     height: auto;
   }
 }
@@ -97,6 +97,7 @@ p {
 .container .container-item-2 img {
   max-height: 700px;
   width: auto;
+  max-width: 100vw;
 }
 
 .the-knight {
@@ -109,9 +110,16 @@ p {
 
 @media screen and (max-width: 1150px) {
   .the-knight {
-    width: 100%;
     -webkit-transform: translate3d(0, 0, 0);
             transform: translate3d(0, 0, 0);
+  }
+}
+
+@media screen and (max-width: 1150px) {
+  .buttons {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
   }
 }
 
@@ -172,6 +180,71 @@ p {
   width: 100%;
 }
 
+.item-3 svg {
+  cursor: pointer;
+}
+
+.item-3 svg path {
+  -webkit-transition: .6s ease;
+  transition: .6s ease;
+}
+
+.item-3 svg:hover path, .item-3 svg:hover circle {
+  fill: #6771BF;
+}
+
+.bg-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -2;
+  overflow: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.bg-video::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  background: linear-gradient(252.87deg, #0A0C10 33.58%, rgba(10, 12, 16, 0.55) 53.46%, #090A17 74.5%);
+  -webkit-transform: matrix(-1, 0, 0, 1, 0, 0);
+          transform: matrix(-1, 0, 0, 1, 0, 0);
+}
+
+.bg-loader {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 99;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: linear-gradient(225deg, #535DA9 0%, #313D99 100%);
+  overflow: hidden;
+}
+
 header {
   width: 100%;
   padding-top: 16px;
@@ -223,6 +296,7 @@ header {
 .logo {
   max-width: 88px;
   max-width: 60px;
+  cursor: pointer;
 }
 
 .nav-link {
@@ -261,10 +335,33 @@ header {
 
 .bx {
   width: 48px;
-  height: 48px;
+  height: 8px;
   background-color: #EDF1F7;
   border-radius: 8px;
+  position: relative;
   display: none;
+}
+
+.bx::before {
+  content: "";
+  width: 48px;
+  height: 8px;
+  margin-top: 4px;
+  top: 16px;
+  border-radius: 8px;
+  background: #EDF1F7;
+  position: absolute;
+}
+
+.bx::after {
+  content: "";
+  width: 48px;
+  height: 8px;
+  margin-top: 2px;
+  top: 8px;
+  border-radius: 8px;
+  background: #EDF1F7;
+  position: absolute;
 }
 
 @media screen and (max-width: 1150px) {
@@ -305,6 +402,40 @@ header {
 
 .nav-social svg:hover path, .nav-social svg:hover circle {
   fill: #6771BF;
+}
+
+.logo-hk {
+  fill: transparent;
+  -webkit-animation: logo-hk 12s ease infinite alternate;
+          animation: logo-hk 12s ease infinite alternate;
+}
+
+@-webkit-keyframes logo-hk {
+  0% {
+    stroke-width: 0;
+    fill: transparent;
+  }
+  30% {
+    stroke-width: 1;
+  }
+  60%, 100% {
+    stroke-width: 0.3;
+    fill: #E5E9EF;
+  }
+}
+
+@keyframes logo-hk {
+  0% {
+    stroke-width: 0;
+    fill: transparent;
+  }
+  30% {
+    stroke-width: 1;
+  }
+  60%, 100% {
+    stroke-width: 0.3;
+    fill: #E5E9EF;
+  }
 }
 
 .s-0 {

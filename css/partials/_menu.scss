@@ -34,6 +34,7 @@ header {
 .logo{
   max-width: 88px;
   max-width: 60px;
+  cursor: pointer;
 }
 
 .nav-link{
@@ -76,11 +77,33 @@ header {
 
 .bx{
   width: 48px;
-  height: 48px;
+  height: 8px;
   background-color: $white;
   border-radius: 8px;
+  position: relative;
 
   display: none;
+
+  &::before{
+    content: "";
+    width: 48px;
+    height: 8px;
+    margin-top: 4px;
+    top: 16px;
+    border-radius: 8px;
+    background: $white;
+    position: absolute;
+  }
+  &::after{
+    content: "";
+    width: 48px;
+    height: 8px;
+    margin-top: 2px;
+    top: 8px;
+    border-radius: 8px;
+    background: $white;
+    position: absolute;
+  }
 
   @include responsive(){
     display: block;
