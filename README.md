@@ -1,6 +1,6 @@
 
 <div align="center" >
-  <img src="img/hollow-knight-text.png"/>
+  <img src="https://github.com/natalia-fs/frontweek-hollowknight/blob/main/img/hollow-knight-text.png?raw=true"/>
 </div>
 
 # Frontweek: Hollow Knight
